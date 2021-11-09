@@ -1,0 +1,80 @@
+<section class="contact">
+  <div class="container">
+    <h2 class="contact__title title">
+      Контакты
+    </h2>
+    <div class="contact__inner">
+      <div class="contact__info">
+        <p class="contact__text">
+          Связаться со мной можно, воспользовавшись контактной формой, или напрямую по номеру телефона, email, в
+          соцсетях:
+        </p>
+        <div class="contact__links">
+          <a href="tel:+380501111111" class="contact__link">
+            +38 (050) 111 11 11
+          </a>
+
+          <a href="mailto:frontend-monster@email.com" class="contact__link">
+            frontend-monster@email.com
+          </a>
+        </div>
+        <div class="contact__social">
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a href="#" class="contact__social-link">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact__item">
+              <a href="#" class="contact__social-link">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="contact__item">
+              <a href="#" class="contact__social-link">
+                <svg class="contact__icon">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <form action="#" class="contact__form">
+        <div class="contact__login">
+          <div class="contact__box">
+            <span class="contact__name">
+              Ваше имя
+            </span>
+            <label class="contact__label">
+              <input class="contact__input" name="fname" type="text" placeholder="Иван" required>
+            </label>
+          </div>
+          <div class="contact__box">
+            <span class="contact__name">
+              Номер телефона
+            </span>
+            <label class="contact__label">
+              <input class="contact__input" name="number" type="tel" placeholder="+380501111111" required>
+            </label>
+          </div>
+        </div>
+        <span class="contact__name contact__name--text">
+          Ваше сообщение
+        </span>
+        <textarea class="contact__desc" name="Contact-Message" maxlength="5000" placeholder="Текст вашего сообщения"
+          required></textarea>
+
+        <button class="contact__btn btn" type="submit">
+          Отправить
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>

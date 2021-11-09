@@ -1,0 +1,75 @@
+.achievement {
+  padding: 140px 0 0;
+
+  @include r(575) {
+    padding: 50px 0 0;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+
+    @include r(991) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    background-color: #F6F6F8;
+    border: 1px solid #DBDBED;
+    max-width: 280px;
+    width: 100%;
+    max-height: 287px;
+    padding: 50px 44px;
+
+    @include r(768) {
+      margin-bottom: 15px;
+    }
+
+    @include r(575) {
+      max-width: 165px;
+      padding: 22px 15px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 17px;
+
+      @include r(768) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__icon {
+    width: 97px;
+    height: 80px;
+    margin-bottom: 20px;
+
+    @include r(575) {
+      width: 42px;
+      height: 35px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    @include r(575) {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__num {
+    font-weight: 600;
+    font-size: 44px;
+
+    @include r(575) {
+      font-size: 30px;
+    }
+  }
+}

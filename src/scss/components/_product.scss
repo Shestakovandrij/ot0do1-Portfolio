@@ -1,0 +1,36 @@
+.product {
+  padding: 70px 0 140px;
+
+  @include r(575) {
+    padding: 25px 0 50px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 45px 45px;
+    margin-bottom: 60px;
+
+    @include r(1199) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px 15px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.product-cart {
+  &__img {
+    max-width: 360px;
+    max-height: 360px;
+
+    @include r(575) {
+      max-width: 165px;
+    }
+  }
+}

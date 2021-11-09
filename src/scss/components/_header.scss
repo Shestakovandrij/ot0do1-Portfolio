@@ -1,0 +1,168 @@
+.header {
+  padding: 75px 0 30px;
+  @include bg-cover;
+  position: relative;
+  z-index: 2;
+
+  @include r(575) {
+    padding: 15px 0 30px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(#2352DE80, #2352DE80) fixed;
+    z-index: 1;
+  }
+
+  &__top {
+    @include flex-all-sb;
+    margin-bottom: 320px;
+    z-index: 999999;
+    position: relative;
+
+    @include r(575) {
+      margin-bottom: 235px;
+    }
+
+    &--active {
+      .menu__list {
+        transform: translateY(0%);
+      }
+    }
+  }
+
+  &__info {
+    max-width: 645px;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.3;
+    color: #fff;
+
+    margin-bottom: 209px;
+    z-index: 2;
+    position: relative;
+
+    span {
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 1.4;
+
+      @include r(575) {
+        font-size: 40px;
+      }
+    }
+
+    @include r(575) {
+      font-size: 28px;
+      margin-bottom: 170px;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 5px 40px 5px;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 2;
+    position: relative;
+
+    @include r(575) {
+      font-size: 14px;
+      padding: 0px 5px 17px 5px;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &::after {
+      position: absolute;
+      content: url(../img/down-arrow.png);
+      width: 40px;
+      height: 25px;
+      left: 65px;
+      top: 40px;
+
+      @include r(575) {
+        left: 47px;
+         width: 37px;
+         height: 21px;
+         top: 21px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1, 1);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      left: 0;
+      bottom: 35px;
+      transform: scale(0, 1);
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+  }
+}
+
+.logo {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include r(991) {
+    position: relative;
+    z-index: 100111;
+  }
+
+  @include r(575) {
+    max-width: 110px;
+    max-height: 36px;
+  }
+}
+
+.burger {
+  --burger-width: 30px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+  display: none;
+
+  @include r(991) {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2001;
+    text-align: center;
+  }
+
+  @include burger;
+}

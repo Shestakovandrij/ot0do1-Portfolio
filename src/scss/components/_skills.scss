@@ -1,0 +1,93 @@
+.skills {
+  background-color: #F6F6F8;
+
+  @include r(575) {
+    text-align: center;
+    padding-top: 75px;
+  }
+
+  &__content {
+    @include flex-all-sb;
+
+    @include r(1199) {
+      flex-direction: column;
+    }
+
+    @include r(575) {
+      flex-direction: column
+    }
+  }
+
+  &__img {
+    @include r(1199) {
+      margin-bottom: 30px;
+    }
+
+    @include r(575) {
+      max-width: 300px;
+    }
+  }
+
+  &__info {
+    width: 665px;
+
+    @include r(575) {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    @include r(575) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    @include flex-all-sb;
+
+    @include r(575) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 86px;
+
+      @include r(575) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+
+    @include r(575) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__percent {
+    width: 100%;
+    max-width: 600px;
+    appearance: none;
+    height: 20px;
+    border: none;
+
+    @include r(575) {
+      height: 32px;
+      max-width: 300px;
+    }
+  }
+}
+
+
+progress::-webkit-progress-bar {
+  background-color: #DBDBED;
+}
+
+progress::-webkit-progress-value {
+  background-color: #2352DE;
+}

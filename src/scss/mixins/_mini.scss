@@ -1,0 +1,103 @@
+@mixin bg-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-all-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin prefixed($property, $value) {
+  @if $webkit==true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $moz==true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $ms==true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $o==true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $webkit==true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $moz==true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $ms==true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $o==true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content;
+  }
+}

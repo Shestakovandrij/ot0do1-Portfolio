@@ -1,0 +1,21 @@
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "libs";
+
+
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/menu";
+@import "./components/about";
+@import "./components/skills";
+@import "./components/services";
+@import "./components/product";
+@import "./components/nav-filter";
+@import "./components/reviews";
+@import "./components/achievement";
+@import "./components/contact";

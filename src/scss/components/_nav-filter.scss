@@ -1,0 +1,59 @@
+.nav-filter {
+  margin-bottom: 70px;
+
+  @include r(575) {
+    margin-bottom: 30px;
+  }
+
+  @include r(575) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #333333;
+    font-weight: 600;
+    font-size: 24px;
+    transition: color 0.5s;
+    position: relative;
+
+    &:hover {
+      &::after {
+        transform: scale(1, 1);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #2352DE;
+      left: 0;
+      bottom: 0;
+      transform: scale(0, 1);
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+
+    @include r(575) {
+      font-size: 18px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 35px;
+
+      @include r(575) {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+
+    &.mixitup-control-active {
+      color: #2352DE;
+    }
+  }
+}
